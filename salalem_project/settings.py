@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'music'
+    'music',
+    'graphene_django'
 ]
 
 MIDDLEWARE = [
@@ -116,3 +117,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+#  Graphene
+GRAPHENE = {
+    'SCHEMA': 'salalem_project.schema.schema', #   specific the path to the main schema file
+    'MIDDLEWARE': (
+        'graphql_jwt.middleware.JSONWebTokenMiddleware',
+    ),
+}
