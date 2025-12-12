@@ -54,7 +54,7 @@ python manage.py runserver
 
 ### Example Queries
 we will follow this formatt
-first query name them query formatt between ======
+first query name then query formatt between ======
 ### Artists
 get all Artists
 ==============================================
