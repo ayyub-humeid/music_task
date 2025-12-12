@@ -56,11 +56,12 @@ python manage.py runserver
 we will follow this formatt
 first query name then query formatt between ======
 ### Artists
-get all Artists
+get all Artists with albums (relationship) them get the songs name that linked with album
 ==============================================
 query allArtists{
   allArtists{
-    name,albums{
+
+id,name,birthYea,albums{
       title,songs{
         title
       }
