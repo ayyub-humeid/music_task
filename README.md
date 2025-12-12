@@ -1,4 +1,4 @@
-# music_task
+
 # Django Music API (GraphQL)
 
 A backend API built using **Django** and **Graphene-Django** to provide data about  
