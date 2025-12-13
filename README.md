@@ -35,7 +35,7 @@ This API is part of the Salalem technical task – Part 1.
 
 ## 🔧 Installation
 
-### 1. Clone the repository
+### 1. Clone the repository and configration
 ```bash
 git clone https://github.com/YOUR_NAME/music_backend.git
 cd music_backend
