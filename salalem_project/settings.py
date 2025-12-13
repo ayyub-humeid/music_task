@@ -38,10 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'music',
-    'graphene_django'
+    'graphene_django',
+     'corsheaders',
 ]
 
 MIDDLEWARE = [
+     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -119,8 +121,18 @@ USE_TZ = True
 STATIC_URL = 'static/'
 #  Graphene
 GRAPHENE = {
-    'SCHEMA': 'salalem_project.schema.schema', #   specific the path to the main schema file
-    'MIDDLEWARE': (
-        'graphql_jwt.middleware.JSONWebTokenMiddleware',
-    ),
+    'SCHEMA': 'salalem_project.schema.schema',
+    'MIDDLEWARE': [
+        'graphene_django.debug.DjangoDebugMiddleware',
+    ],
 }
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",
+    "http://localhost:5174",
+    "http://localhost:5175",
+    "http://localhost:5176",
+    "http://localhost:5177",
+    "http://localhost:5178",
+]
+CORS_ALLOW_ALL_ORIGINS = True  # For development
+CORS_ALLOW_CREDENTIALS = True
